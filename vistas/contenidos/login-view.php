@@ -3,7 +3,7 @@
     <div class="container">
 
         <!-- Outer Row -->
-        <div class="row justify-content-center">
+        <div class="row justify-content-center align-content-center">
 
             <div class="col-xl-10 col-lg-12 col-md-9">
 
@@ -54,6 +54,7 @@
 </div>
 
 <?php
+
 if (isset($_POST["usuario_log"]) && isset($_POST["clave_log"])) {
     require_once "./controladores/loginControlador.php";
     $ins_login = new loginControlador();

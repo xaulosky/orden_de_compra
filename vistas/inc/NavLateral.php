@@ -24,7 +24,7 @@
 
     <!-- Heading -->
     <div class="sidebar-heading">
-        Interface
+        Sistena Orden de Compra
     </div>
     <!-- Heading -->
     <li class="nav-item">
@@ -34,91 +34,69 @@
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo SERVERURL . "insumos/"; ?>">
+        <a class="nav-link" href="<?php echo SERVERURL . "insumos-lista/"; ?>">
             <i class="fas fa-fw fa-chart-area"></i>
             <span>Insumos</span></a>
     </li>
 
     <li class="nav-item">
-        <a class="nav-link" href="<?php echo SERVERURL . "provedores/"; ?>">
+        <a class="nav-link" href="<?php echo SERVERURL . "provedores-lista/"; ?>">
             <i class="fas fa-fw fa-chart-area"></i>
-            <span>Provedores</span></a>
+            <span>Lista Provedores</span></a>
     </li>
-
-
-    <!-- Nav Item - Pages Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-            <i class="fas fa-fw fa-cog"></i>
-            <span>Components</span>
-        </a>
-        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Components:</h6>
-                <a class="collapse-item" href="buttons.html">Buttons</a>
-                <a class="collapse-item" href="cards.html">Cards</a>
-            </div>
-        </div>
+        <a class="nav-link" href="<?php echo SERVERURL . "provedores-buscar/"; ?>">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Buscar Provedores</span></a>
     </li>
-
-    <!-- Nav Item - Utilities Collapse Menu -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
-            <i class="fas fa-fw fa-wrench"></i>
-            <span>Utilities</span>
-        </a>
-        <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
-            <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Custom Utilities:</h6>
-                <a class="collapse-item" href="utilities-color.html">Colors</a>
-                <a class="collapse-item" href="utilities-border.html">Borders</a>
-                <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                <a class="collapse-item" href="utilities-other.html">Other</a>
-            </div>
-        </div>
+        <a class="nav-link" href="<?php echo SERVERURL . "provedores-nuevo/"; ?>">
+            <i class="fas fa-fw fa-chart-area"></i>
+            <span>Nuevo Provedor</span></a>
     </li>
 
     <!-- Divider -->
     <hr class="sidebar-divider">
 
-    <!-- Heading -->
-    <div class="sidebar-heading">
-        Addons
-    </div>
-
-    <!-- Nav Item - Pages Collapse Menu -->
+    <!-- CLIENTES -->
     <li class="nav-item">
-        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages" aria-expanded="true" aria-controls="collapsePages">
-            <i class="fas fa-fw fa-folder"></i>
-            <span>Pages</span>
+        <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseClientes" aria-expanded="true" aria-controls="collapseUtilities">
+            <i class="fas fa-fw fa-wrench"></i>
+            <span>Clientes</span>
         </a>
-        <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
+        <div id="collapseClientes" class="collapse" aria-labelledby="headingClientes" data-parent="#accordionSidebar">
             <div class="bg-white py-2 collapse-inner rounded">
-                <h6 class="collapse-header">Login Screens:</h6>
-                <a class="collapse-item" href="login.html">Login</a>
-                <a class="collapse-item" href="register.html">Register</a>
-                <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
-                <div class="collapse-divider"></div>
-                <h6 class="collapse-header">Other Pages:</h6>
-                <a class="collapse-item" href="404.html">404 Page</a>
-                <a class="collapse-item" href="blank.html">Blank Page</a>
+                <h6 class="collapse-header">Opciones de cliente</h6>
+                <a class="collapse-item" href="<?php echo SERVERURL . "cliente-buscar/"; ?>">Buscar Cliente</a>
+                <a class="collapse-item" href="<?php echo SERVERURL . "cliente-lista/"; ?>">Lista Clientes</a>
+                <a class="collapse-item" href="<?php echo SERVERURL . "cliente-nuevo/"; ?>">Nuevo Cliente</a>
             </div>
         </div>
     </li>
+    <!-- CLIENTES -->
 
-    <!-- Nav Item - Charts -->
-    <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-            <i class="fas fa-fw fa-chart-area"></i>
-            <span>Charts</span></a>
-    </li>
+    <!-- Usuarios -->
+    <?php if ($_SESSION['privilegio_oc'] == 1) { ?>
+        <!-- Divider -->
+        <hr class="sidebar-divider">
 
-    <!-- Nav Item - Tables -->
-    <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-            <i class="fas fa-fw fa-table"></i>
-            <span>Tables</span></a>
-    </li>
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUsuarios" aria-expanded="true" aria-controls="collapseUtilities">
+                <i class="fas fa-fw fa-wrench"></i>
+                <span>Usuarios</span>
+            </a>
+            <div id="collapseUsuarios" class="collapse" aria-labelledby="headingUsuarios" data-parent="#accordionSidebar">
+                <div class="bg-white py-2 collapse-inner rounded">
+                    <h6 class="collapse-header">Opciones de usuario</h6>
+                    <a class="collapse-item" href="<?php echo SERVERURL . "usuario-buscar/"; ?>">Buscar Usuario</a>
+                    <a class="collapse-item" href="<?php echo SERVERURL . "usuario-lista/"; ?>">Lista Usuarios</a>
+                    <a class="collapse-item" href="<?php echo SERVERURL . "usuario-nuevo/"; ?>">Nuevo Usuario</a>
+                </div>
+            </div>
+        </li>
+    <?php } ?>
+
+    <!-- Usuarios -->
 
     <!-- Divider -->
     <hr class="sidebar-divider d-none d-md-block">

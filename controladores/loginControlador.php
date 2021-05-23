@@ -93,6 +93,7 @@ class loginControlador extends loginModelo
             });
                
             </script>';
+            
             exit();
         }
     } /* fin controlador iniciar_sesion_controlador */
